@@ -120,15 +120,8 @@
                         $.isPlainObject(context.oInit.alphabetSearch) ? context.oInit.alphabetSearch : {},
                         {
                             letter: '',
-                            letterSearch: '',
-                            pass: 0
                         }
                 );
-
-        // Set required "orderDataType" ("sSortDataType") for a column
-        if (context.alphabetSearch.column >= 0 && context.alphabetSearch.column < context.aoColumns.length) {
-            context.aoColumns[context.alphabetSearch.column].sSortDataType = 'alphabetSearch';
-        }
 
         if (typeof context.ajax.data === 'undefined') {
             context.ajax.data = {alphabetSearchColumn: context.alphabetSearch.column};
